@@ -1,0 +1,42 @@
+<h1>Tasks#index</h1>
+<p>Find me in app/views/tasks/index.html.erb</p>
+
+<p>キーワードの登録</p>
+
+<%= form_for @task do |form| %>
+   <ul>
+      <li><%= form.label :name %><%= form.text_field :name %></li>
+      <li><%= form.label :due_date%><%= form.date_select :due_date %></li>
+      <li><%= form.submit %></li>
+   </ul>
+<% end %>
+
+<%= navigation_links %>
+
+<h1>キーワードの一覧</h1>
+<table class="tasks">
+   <col class="name" />
+   <col class="due_date" />
+   <col class="command" />
+
+   <% @tasks.each do |task| %>
+      <tr>
+	 <td><%= task.name %></td>
+	 <td><%= task.due_date %></td>
+	 <td><%= link_to '完了', [ :finish, task ], :method => :put %></td>
+	 <td><%= link_to 'Google検索する', [ :googleSearch, task ], :method => :put %></td>
+	 <td><%= link_to '検索結果をみるDLページへ',:controller =>:results,:action=>:hyoji,:hoge=>task.name %></td>
+      </tr>
+
+      <!--
+      <%= render 'task', :task => task %>
+      -->
+   <% end %>
+   <!--
+   <%= render @tasks %>
+   -->
+
+</table>
+
+
+

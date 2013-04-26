@@ -1,0 +1,24 @@
+<h1>Tasks#results</h1>
+<p>Find me in app/views/tasks/results.html.erb</p>
+
+
+
+
+<h1>キーワードの一覧</h1>
+<table class="results">
+   <col class="keyword" />
+   <col class="regist_date" />
+   <col class="res1" />
+   <col class="res2" />
+   <col class="res3" />
+
+   <% @results.each do |task| %>
+      <%= render 'task', :task => task %>
+   <% end %>
+   <!--
+   <%= render @tasks %>
+   -->
+</table>
+
+
+

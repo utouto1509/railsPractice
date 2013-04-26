@@ -1,0 +1,8 @@
+NoticeMailer#sendmail_confirm
+
+<%= @greeting %>, find me in app/views/app/views/notice_mailer/sendmail_confirm.text.erb
+
+ユーザ名：<%= @user.username %>
+メールアドレス：<%= @user.email %>
+URL : <%= url_for( :host => 'www.example.com', :controller => 'books', :action => 'index' ) %>
+

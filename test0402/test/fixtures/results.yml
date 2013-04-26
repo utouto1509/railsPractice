@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  keyword: MyString
+  regist_date: 2013-04-22
+  res1: MyString
+  res2: MyString
+  res3: MyString
+
+two:
+  keyword: MyString
+  regist_date: 2013-04-22
+  res1: MyString
+  res2: MyString
+  res3: MyString
