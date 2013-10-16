@@ -24,13 +24,13 @@
 	 <td><%= task.name %></td>
 	 <td><%= task.due_date %></td>
 	 <td><%= finish_or_unfinish(task) %></td>
-	 <td><%= link_to 'Google検索する', [ :googleSearch, task ], :method => :put %></td>
-	 
+	 <td><%= delete_word(task) %></td>
+	 <td><%= google_search(task) %></td>
 	 <!--
-	 <td><%= link_to '完了', [ :finish, task ], :method => :put %></td>
-	 -->
 	 <td><%= link_to 'Google検索する', [ :googleSearch, task ], :method => :put %></td>
-	 <td><%= link_to '検索結果をみるDLページへ',:controller =>:results,:action=>:hyoji,:hoge=>task.name %></td>
+	 -->
+	 
+	 <td><%= link_to '検索結果をみる',:controller =>:results,:action=>:hyoji,:searchWord=>task.name %></td>
       </tr>
 
       <!--

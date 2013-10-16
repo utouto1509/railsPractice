@@ -11,9 +11,22 @@ module TasksHelper
 
    def finish_or_unfinish(task)
       if task.done?
-	 link_to('もどす', [ :unfinish, task ], :method => :put)
+	 link_to('もどす(検索を行うようにする)', [ :unfinish, task ], :method => :put)
       else
-	 link_to('完了', [ :unfinish, task ], :method => :put)
+	 link_to('検索しない', [ :unfinish, task ], :method => :put)
+      end
+   end
+
+   def delete_word(task)
+      if task.done?
+	 link_to('登録ワードから削除する', [ :delete_word_from_db, task ], :method => :put)
+      end
+   end
+
+   def google_search(task)
+      if task.done?
+      else
+	 link_to('Google検索する', [ :googleSearch, task ], :method => :put)
       end
    end
 

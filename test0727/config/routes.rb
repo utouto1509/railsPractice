@@ -20,6 +20,7 @@ Test0727::Application.routes.draw do
 
       put :finish, :on => :member
       put :unfinish, :on => :member
+      put :delete_word_from_db, :on => :member
       get :done, :on => :collection
       put :googleSearch, :on => :member
   end

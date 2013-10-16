@@ -43,3 +43,6 @@ gem "google_custom_search"
 gem "nokogiri"
 
 gem 'delayed_job_active_record'
+
+gem 'whenever', :require => false
+

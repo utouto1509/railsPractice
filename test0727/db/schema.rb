@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130727104028) do
+ActiveRecord::Schema.define(:version => 20131011052613) do
 
   create_table "delayed_jobs", :force => true do |t|
     t.integer  "priority",   :default => 0
@@ -37,6 +37,33 @@ ActiveRecord::Schema.define(:version => 20130727104028) do
     t.string   "res3"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
+    t.string   "res4"
+    t.string   "res11"
+    t.string   "res12"
+    t.string   "res13"
+    t.string   "res14"
+    t.string   "res15"
+    t.string   "res16"
+    t.string   "res17"
+    t.string   "res18"
+    t.string   "res19"
+    t.string   "res20"
+    t.string   "res21"
+    t.string   "res22"
+    t.string   "res23"
+    t.string   "res24"
+    t.string   "res25"
+    t.string   "res26"
+    t.string   "res27"
+    t.string   "res28"
+    t.string   "res29"
+    t.string   "res30"
+    t.string   "res5"
+    t.string   "res6"
+    t.string   "res7"
+    t.string   "res8"
+    t.string   "res9"
+    t.string   "res10"
   end
 
   create_table "tasks", :force => true do |t|

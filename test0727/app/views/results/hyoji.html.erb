@@ -1,15 +1,17 @@
 <h1>Results#index</h1>
 <p>Find me in app/views/results/index.html.erb</p>
 
-<h2><%= @hoge %></h2>
+<p>検索ワード<p>
+<h2><%= @searchWord %></h2>
 
-<h1>キーワードの一覧</h1>
-<table class="results">
+<h1>検索結果の一覧</h1>
+<table class="results" border="1">
    <col class="keyword" />
    <col class="regist_date" />
    <col class="res1" />
    <col class="res2" />
    <col class="res3" />
+   <col class="res4" />
 
    <% @results.each do |result| %>
       <%= render 'result', :result=> result %>
@@ -20,5 +22,3 @@
 <%= link_to '戻る',:controller =>:tasks,:action=>:index %>
 <%= link_to 'メール送る', sendmail_path%>
 
-<%= javascript_include_tag :defaults %>
-<%= link_to_function("メール送る","alert('send');",[:send_mail, task]) %>
